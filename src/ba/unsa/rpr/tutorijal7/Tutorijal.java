@@ -31,9 +31,8 @@ public class Tutorijal {
 
         }catch(FileNotFoundException e){
             System.out.println("Datoteka ne postoji ili se ne moze otvoriti" + e);
-        }finally {
-            ulaz.close();
         }
+        ulaz.close();
         return gradovi;
     }
 
