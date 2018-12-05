@@ -1,12 +1,21 @@
 package ba.unsa.rpr.tutorijal7;
 
-public class Grad {
+import java.io.Serializable;
+
+public class Grad implements Serializable {
     private String naziv = "";
     private int brojStanovnika;
     private double[] temperature = new double[1000];
 
     public Grad(){
 
+    }
+
+    public Grad(String naziv, Double[] temps){
+        this.naziv = naziv;
+        for(int i = 0; i < temps.length; i++){
+            temperature[i] = temps[i];
+        }
     }
 
 
