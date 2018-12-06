@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<drzave>
+    <drzava stanovnika="3500000">
+        <naziv>Bosna i Hercegovina</naziv>
+        <glavni stanovnika="400000">
+            <naziv>Sarajevo</naziv>
+        </glavni>
+        <povrsina jedinica="km2">51129</povrsina>
+        <moneta naziv="KM"/>
+    </drzava>
+
+    <drzava stanovnika="3286314">
+        <naziv>Urugvaj</naziv>
+        <glavni>
+            <naziv>Montevideo</naziv>
+        </glavni>
+        <povrsina jedinica="km2">176215</povrsina>
+        <moneta naziv="Uragvajski pesos"/>
+    </drzava>
+
+    <drzava stanovnika="144500000">
+        <naziv>Rusija</naziv>
+        <glavni>
+            <naziv>Moskva</naziv>
+        </glavni>
+        <povrsina jedinica="km2">17100000</povrsina>
+        <moneta naziv="Ruski rubalj"/>
+    </drzava>
+</drzave>

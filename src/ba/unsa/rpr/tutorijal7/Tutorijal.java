@@ -1,5 +1,13 @@
 package ba.unsa.rpr.tutorijal7;
 
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.lang.reflect.Array;
@@ -36,8 +44,34 @@ public class Tutorijal {
         return gradovi;
     }
 
+
+    public static void ucitajXml(){
+        UN xml = new UN();
+        Drzava drzava = new Drzava();
+        ArrayList<Drzava> drzave = new ArrayList<Drzava>();
+
+        Document xmldoc = null;
+        try {
+            DocumentBuilder docReader = DocumentBuilderFactory.newInstance().newDocumentBuilder();
+            xmldoc = docReader.parse(new File("C:\\Users\\Dell\\IdeaProjects\\rpr-t7\\src\\ba\\unsa\\rpr\\tutorijal7\\drzave.xml"));
+
+            Element korijen = xmldoc.getDocumentElement();
+            NodeList djeca = korijen.getChildNodes();
+            if(djeca.getLength() == 1){
+                System.out.println("Ispisi: " +  korijen.getTextContent());
+            }
+
+            System.out.println("Ispisi: ");
+
+        } catch (Exception e) {
+            System.out.println("drzave.xml nije validan XML dokument");
+        }
+
+        //return xml;
+    }
+
     public static void main(String[] args) {
-        ArrayList<Grad> gradovi = ucitajGradove();
+        /*ArrayList<Grad> gradovi = ucitajGradove();
         for(Grad g : gradovi){
             System.out.println("Grad: " + g.getNaziv());
             System.out.println("Temperature: ");
@@ -46,6 +80,8 @@ public class Tutorijal {
                 System.out.print(temp + " | ");
             }
             System.out.println();
-        }
+        }*/
+
+        ucitajXml();
     }
 }
